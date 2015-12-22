@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose readDependencies loading dependencies from d:\w\designcontest\package.json
+5 error install Couldn't read dependencies
+6 verbose stack Error: Invalid name: "Football SPA"
+6 verbose stack     at ensureValidName (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:331:15)
+6 verbose stack     at Object.module.exports.fixNameField (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:210:5)
+6 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\normalize.js:32:38
+6 verbose stack     at Array.forEach (native)
+6 verbose stack     at normalize (c:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\normalize.js:31:15)
+6 verbose stack     at final (c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:338:5)
+6 verbose stack     at then (c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:113:5)
+6 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json\read-json.js:300:12
+6 verbose stack     at c:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:76:16
+6 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+7 verbose cwd d:\w\designcontest
+8 error Windows_NT 6.1.7601
+9 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+10 error node v4.2.1
+11 error npm  v2.14.7
+12 error Invalid name: "Football SPA"
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
