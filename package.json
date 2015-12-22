@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "test",
   "main": "gulpfile.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "author": "Alex Kysil",
   "license": "ISC",
   "dependencies": {
