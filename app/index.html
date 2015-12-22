@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-strict-di ng-app="app">
+<head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Football SPA</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,500,500italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css">
+  
+</head>
+
+<body ng-controller="mainCtrl">
+
+<header><img src="img/logo.png" alt="DesignContest.com"></header>
+<main>
+    <form>
+        <input type="search" ng-model="query" ng-class="{'error': error}" ng-change="checkQuery()" autofocus>
+    </form>
+
+    <section ng-repeat="footballer in filteredFootballers = (footballers | advancedSearch:query) track by footballer.id">
+        <h2 ng-bind="footballer.name"></h2>
+        <dl>
+            <dt ng-bind="'Position'"></dt>
+            <dd ng-bind="footballer.position"></dd>
+
+            <dt ng-bind="'Jersey Number'"></dt>
+            <dd ng-bind="footballer.jerseyNumber"></dd>
+
+            <dt ng-bind="'Date Of Birth'"></dt>
+            <dd ng-bind="footballer.dateOfBirth"></dd>
+
+            <dt ng-bind="'Nationality'"></dt>
+            <dd ng-bind="footballer.nationality"></dd>
+
+            <dt ng-bind="'Contract Until'"></dt>
+            <dd ng-bind="footballer.contractUntil"></dd>
+
+            <dt ng-bind="'Market Value'"></dt>
+            <dd ng-bind="footballer.marketValue"></dd>
+        </dl>
+    </section>
+
+    <section ng-show="query && !filteredFootballers.length">
+        <h2 ng-bind="'Nothing found'"></h2>
+    </section>
+
+</main>
+<footer>
+    <nav>
+        <a href="#">HELP</a>
+        <a href="#">OUR TEAM</a>
+        <a href="#">CONTACT US</a>
+    </nav>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

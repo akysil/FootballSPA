@@ -1,0 +1,97 @@
+@import 'reset';
+
+$black-back: #434753;
+$container-padding: 0 calc((100% - 950px) / 2) 0 calc((100% - 950px) / 2);
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    overflow-y: scroll;
+    min-width: 320px;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+header {
+    min-width: 320px;
+    height: 60px;
+    background-color: $black-back;
+    padding: $container-padding;
+}
+main {
+    padding: $container-padding;
+    padding-bottom: 25px;
+    min-height: calc(100% - 163px);
+}
+main form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px 5px;
+}
+main form input {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 0.3em;
+    padding: 5px 8px;
+    border: 1px solid $black-back;
+}
+main form input:focus {
+    outline:none;
+    border: 1px solid #57a1b4;
+    background-color: #f2f2f2;
+}
+main form input.error,
+main form input.error:focus {
+    border: 1px solid red;
+}
+main section {
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+main section h2 {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 8px 5px;
+}
+main section dl {
+    display: flex;
+    flex-flow: row wrap;
+}
+main section dt,
+main section dd {
+    flex: 40%;
+    padding: 3px 5px;
+}
+main section dt.ng-binding:nth-child(4n+1) {
+    background-color: #f2f2f2;
+}
+main section dd.ng-binding:nth-child(4n+2) {
+    background-color: #f2f2f2;
+}
+footer {
+    height: 78px;
+    background-color: $black-back;
+    padding: $container-padding;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+footer nav {
+    height: 78px;
+    flex-basis: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 10px;
+}
